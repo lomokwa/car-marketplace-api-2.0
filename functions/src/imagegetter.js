@@ -11,8 +11,11 @@
 
 import cheerio from "cheerio";
 
-export default function imageGetter(listingUrl) {
-  
-  
-  return imageUrl
-}
+
+export function imageGetter(listingUrl) {
+  const $ = cheerio.load(listingUrl);
+  const imageUrl = $("img").src;
+  return imageUrl;
+};
+
+console.log(imageGetter("https://www.facebook.com/marketplace/item/990120742001342/"))
