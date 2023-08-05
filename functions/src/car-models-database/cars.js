@@ -10,7 +10,7 @@ export async function getMakes(req, res) {
 
 export async function getModels(req, res) {
   const { make } = req.params;
-  const models = await coll.distinct("Model", { "Make": make } )
+  const models = await coll.distinct("Model", { "Make": make } );
 
   res.send(models);
 };

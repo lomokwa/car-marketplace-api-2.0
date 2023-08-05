@@ -13,6 +13,7 @@ app.use(express.json());
 
 app.get("/listings", getListings);
 app.post("/listings/newlisting", addListing);
+
 app.get("/getmakes", getMakes);
 app.get("/getmodels/:make", getModels);
 
