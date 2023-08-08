@@ -10,7 +10,7 @@ export async function getListings(req, res) {
 };
 
 export async function addListing(req, res) {
-  const { make, model, year, price, mileage, transmission, url, image } = req.body;
+  const { make, model, year, price, mileage, transmission, url, image, rating } = req.body;
 
   if (!make || !model || !year || !price || !mileage || !transmission ) {
     res.status(401).send({ success: false, message: "Invalid Request" });
